@@ -33,19 +33,6 @@ public class TestDataFactoryHelper {
     }
 
     /**
-     *
-     */
-    public static List<SObject> populateSObjectIds(
-        List<SObject> recordsToPopulateIds
-    ) {
-        for (SObject record : recordsToPopulateIds) {
-            record.put('Id', getFakeSObjectId(record.getSObjectType()));
-        }
-
-        return recordsToPopulateIds;
-    }
-
-    /**
      * Create random Integer values
      */
     public static Integer getRandInt() {

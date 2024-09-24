@@ -113,25 +113,6 @@ public class TestDataFactory {
     }
 
     /*  ****************************************  */
-    /*                  General                   */
-    /*  ****************************************  */
-    /**
-     * Creates a fake record Id for an SObject of length 18.
-     * e.g. getFakeSObjectId(Account.getSObjectType())
-     * @param   SObjectType
-     */
-    //  Allows for more than one SObject Id to be created per function call
-    private static Integer recordNumber = 1;
-    public static String getFakeSObjectId(Schema.SObjectType testSObjType) {
-        String recNum = String.valueOf(recordNumber++);
-        String fakeRecordId =
-            testSObjType.getDescribe().getKeyPrefix() +
-            '0'.repeat(15 - recNum.length()) +
-            recNum;
-        return fakeRecordId;
-    }
-
-    /*  ****************************************  */
     /*                  Account                   */
     /*  ****************************************  */
     /**
@@ -232,7 +213,7 @@ public class TestDataFactory {
     }
 
     /*  ****************************************  */
-    /*                  ContentDocumentLink                   */
+    /*            ContentDocumentLink             */
     /*  ****************************************  */
     /**
      * Gets a ContentDocumentLink from the DTO, adds it to the list of ContentDocumentLinks,
@@ -252,7 +233,7 @@ public class TestDataFactory {
     }
 
     /*  ****************************************  */
-    /*                  ContentVersion                   */
+    /*             ContentVersion                 */
     /*  ****************************************  */
     /**
      * Gets a ContentVersion from the DTO, adds it to the list of ContentVersions,
@@ -272,7 +253,7 @@ public class TestDataFactory {
     }
 
     /*  ****************************************  */
-    /*                  FeedComment                   */
+    /*               FeedComment                  */
     /*  ****************************************  */
     /**
      * Gets a FeedComment from the DTO, adds it to the list of FeedComments,
@@ -292,7 +273,7 @@ public class TestDataFactory {
     }
 
     /*  ****************************************  */
-    /*                  FeedItem                   */
+    /*                 FeedItem                   */
     /*  ****************************************  */
     /**
      * Gets a FeedItem from the DTO, adds it to the list of FeedItems,
@@ -312,7 +293,7 @@ public class TestDataFactory {
     }
 
     /*  ****************************************  */
-    /*                  Group                   */
+    /*                  Group                     */
     /*  ****************************************  */
     /**
      * Gets a Group from the DTO, adds it to the list of Groups,
@@ -372,7 +353,7 @@ public class TestDataFactory {
     }
 
     /*  ****************************************  */
-    /*                  OpportunityLineItem               */
+    /*           OpportunityLineItem              */
     /*  ****************************************  */
     /**
      * Gets an OpportunityLineItem from the DTO, adds it to the list of OpportunityLineItems,
@@ -392,7 +373,7 @@ public class TestDataFactory {
     }
 
     /*  ****************************************  */
-    /*                  QueueSObject               */
+    /*                QueueSObject                */
     /*  ****************************************  */
     /**
      * Gets an QueueSObject from the DTO, adds it to the list of QueueSObjects,
